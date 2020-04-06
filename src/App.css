@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+}
+
+body {
+  background-color: #f64a4a;
+}
+.start {
+  width: 100%;
+  height: auto;
+}
+
+.start h1 {
+  padding-top: 50px;
+  color: #ffca2b;
+  margin: 5px;
+  font-size: 53px;
+}
+
+.start_btns button {
+  display: flex;
+  flex-direction: column;
+  background-color: unset;
+  padding: 10px 10px 10px 105px;
+  font-size: 126px;
+  border: unset;
+  color: #ffca2b;
+  font-weight: 1000;
+  width: 318px;
+  text-align: center;
+  margin: 10px 10px 10px 250px;
+}
+
+.start_btns button:focus {
+  background-color: #ffca2b;
+  color: #f64a4a;
+  width: 302px;
+  text-align: center;
+  height: auto;
+  padding: 10px 10px 10px 105px;
+}
+
+.startBtn {
+  background-color: #ffca2b;
+  color: #f64a4a;
+  border: 1px solid #f64a4a;
+  border-radius: 30px;
+  font-size: 97px;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 467px;
+  margin-top: 29px;
+}
