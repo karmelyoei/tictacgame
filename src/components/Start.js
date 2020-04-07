@@ -5,25 +5,28 @@ import isEmpty from 'lodash.isempty';
 class Start extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      entry: 'X',
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(event) {
     event.preventDefault();
-    let name = event.target.name;
+    let { name } = event.target;
+    this.setState((preState) => {
+      return { entry: name };
+    });
+
     if (event.target.value === 'start') {
-      if (isEmpty(this.state)) {
-        this.setState({ X: 'X' });
-        console.log('Without choose', this.state);
-        this.props.history.push('/game');
-      } else {
-        this.setState({ [name]: name });
-        console.log('with choose', this.state);
+      if (!isEmpty(this.state)) {
+        this.props.history.push('/game', this.state);
       }
+      this.props.history.push('/game', this.state);
     }
   }
   render() {
+    console.log(this.state);
     return (
       <div className="start">
         <h1>Choose a side</h1>
@@ -35,7 +38,11 @@ class Start extends Component {
             O
           </button>
         </div>
-        <button className="startBtn" onClick={this.handleClick} value="start">
+        <button
+          className="startBtn"
+          onClick={(event) => this.handleClick(event)}
+          value="start"
+        >
           Start
         </button>
       </div>

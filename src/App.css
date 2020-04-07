@@ -17,7 +17,7 @@ body {
 }
 
 .start h1 {
-  padding-top: 50px;
+  padding-top: 3px;
   color: #ffca2b;
   margin: 5px;
   font-size: 53px;
@@ -51,9 +51,78 @@ body {
   color: #f64a4a;
   border: 1px solid #f64a4a;
   border-radius: 30px;
-  font-size: 97px;
+  font-size: 76px;
   text-align: center;
   margin-bottom: 30px;
-  width: 467px;
+  width: 364px;
   margin-top: 29px;
+}
+.game img {
+  width: 71px;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 186px);
+  grid-template-rows: repeat(3, 186px);
+  margin-top: 40px;
+  margin-left: 111px;
+  grid-gap: 10px;
+  width: fit-content;
+}
+
+.grid_Btns {
+  align-self: center;
+  width: 186px;
+  height: 186px;
+  background-color: #f64a4a;
+}
+.grid button {
+  background-color: unset;
+  font-size: 77px;
+  color: #ffca2b;
+  font-weight: bolder;
+  border: unset;
+  padding-top: 10px;
+  align-self: center;
+  width: 186px;
+  height: 186px;
+  background-color: #f64a4a;
+}
+
+.grid button:focus {
+  border: unset;
+}
+
+.replay {
+  background-color: #ffca2b;
+  border: 1px solid #f64a4a;
+  border-radius: 30px;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 15px;
+  width: 250px;
+  margin-top: 19px;
+  padding-bottom: 5px;
+  margin-right: 124px;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.players {
+  margin-left: 30px;
+  padding-right: 132px;
+}
+
+.winner {
+  position: relative;
+  font-size: 52px;
+  top: 41%;
+  left: 50%;
+  transform: translate(-53%, -305%) rotate(20deg);
 }
